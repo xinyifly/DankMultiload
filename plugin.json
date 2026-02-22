@@ -1,0 +1,5 @@
+{
+  "id": "multiload",
+  "name": "Multiload",
+  "component": "./Multiload.qml"
+}
