@@ -8,16 +8,22 @@ PluginComponent {
     horizontalBarPill: Row {
         spacing: Theme.spacingXS
         StepArea {
-            fractions: cpu.fractions
+            fractions: dgop.cpus
+        }
+        StepArea {
+            fractions: dgop.mems
         }
     }
     verticalBarPill: Column {
         spacing: Theme.spacingXS
         StepArea {
-            fractions: cpu.fractions
+            fractions: dgop.cpus
+        }
+        StepArea {
+            fractions: dgop.mems
         }
     }
-    Cpu {
-        id: cpu
+    Dgop {
+        id: dgop
     }
 }
