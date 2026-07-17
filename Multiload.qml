@@ -13,6 +13,9 @@ PluginComponent {
         StepArea {
             fractions: dgop.mems
         }
+        StepArea {
+            fractions: dgop.nets
+        }
     }
     verticalBarPill: Column {
         spacing: Theme.spacingXS
@@ -21,6 +24,9 @@ PluginComponent {
         }
         StepArea {
             fractions: dgop.mems
+        }
+        StepArea {
+            fractions: dgop.nets
         }
     }
     Dgop {
