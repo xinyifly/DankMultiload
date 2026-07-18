@@ -41,8 +41,10 @@ Item {
         property real prevRx: -1
         function digest(net) {
             const rx = net.reduce((s, i) => s + i.rx, 0);
-            if (prevRx >= 0)
-                slide((rx - prevRx) / (timer.interval / 1000) / (20 * 1024 * 1024));
+            if (prevRx >= 0) {
+                const rxRate = (rx - prevRx) / (timer.interval / 1000);
+                slide(Math.min(1, rxRate / (20 * 1024 * 1024)));
+            }
             prevRx = rx;
         }
     }
